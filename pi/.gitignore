@@ -1,0 +1,11 @@
+
+piInit_*
+download_*
+
+*.img
+*.img.gz
+*.ipk
+
+
+*.swp
+
