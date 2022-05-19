@@ -67,6 +67,7 @@ reboot
 
 # Refer to:
 https://openwrt.org/docs/guide-user/services/dns/dnscrypt_dnsmasq_dnscrypt-proxy2
+https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Installation-on-OpenWrt#recommended-tweaks
 https://github.com/openwrt/packages/blob/master/net/shadowsocks-libev/README.md#recipes
 https://openwrt.org/docs/guide-user/services/proxy/shadowsocks
 https://openwrt.org/docs/guide-user/network/wan/wwan/ethernetoverusb_rndis
