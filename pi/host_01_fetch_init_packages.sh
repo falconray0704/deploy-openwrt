@@ -33,6 +33,7 @@ cp -a download_${OPENWRT_RELEASE_VERSION} piInit_${OPENWRT_RELEASE_VERSION}
 
 cp ./target_*.sh piInit_${OPENWRT_RELEASE_VERSION}/
 cp ./.env_target piInit_${OPENWRT_RELEASE_VERSION}/
+cp ./sys_start_ss.sh piInit_${OPENWRT_RELEASE_VERSION}/
 cp ./shadowsocks-libev piInit_${OPENWRT_RELEASE_VERSION}/
 cp ./firewall_dnscrypt_proxy piInit_${OPENWRT_RELEASE_VERSION}/
 
