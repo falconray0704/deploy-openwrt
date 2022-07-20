@@ -7,7 +7,7 @@ while [ -z ${TBONE} ]
 do
     #echo "TBONE is empty, looping..."
     TBONE="$(nslookup tbone.synology.me | grep 'Address 1:' | awk '{print substr($0, 12)}')"
-    sleep 1
+    sleep 20
 done
 
 uci get shadowsocks-libev.ss_rules.dst_ips_bypass
@@ -27,9 +27,10 @@ echo "TBONE:${TBONE}"
 
 #####################################################################################################################################
 
-SS_PORTS='8000 9000 9001 5222 5223 5228 8080 8801 8802 8410 14000 16285'
-first_port=8000
-last_port=16285
+#SS_PORTS='8000 9000 9001 5222 5223 5228 8080 8801 8802 8410 14000 16285'
+SS_PORTS='5188 6188 6666 8000 8080 8410 8801 8802 8888 9001 9999 14000 16285 33445'
+first_port=5188
+last_port=33445
 
 current_port=$(uci get shadowsocks-libev.@server[0].server_port)
 isBingo=0
@@ -61,6 +62,7 @@ fi
 echo "first: ${first_port}, last: ${last_port}, current: ${current_port}, next: ${next_port}"
 uci set shadowsocks-libev.@server[0].server_port=${next_port}
 uci commit
+sync
 
 
 exit 0
